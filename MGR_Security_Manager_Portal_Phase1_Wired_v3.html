@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GSKP • Security Manager Portal (Phase 1)</title>
+
+<style>
+:root{
+  --bg:#f6f7fb;--card:#ffffff;--text:#101828;--muted:#667085;--border:#e6e8ef;
+  --accent:#c45117;--accent2:#f3a683;--link:#0b61ff;
+  --shadow:0 8px 22px rgba(16,24,40,.08);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+header{
+  background:linear-gradient(180deg,#fff,rgba(255,255,255,.76));
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:saturate(160%) blur(10px);
+}
+.wrap{max-width:1120px;margin:0 auto;padding:18px 16px}
+.h1{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.title{font-size:20px;font-weight:800;letter-spacing:.2px;margin:0}
+.subtitle{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--muted);font-size:12px}
+.badge strong{color:var(--text)}
+.badge.role{border-color:rgba(196,81,23,.25);background:rgba(196,81,23,.07);color:#7a2a07}
+.layout{display:grid;grid-template-columns:280px 1fr;gap:16px;align-items:start}
+@media (max-width: 960px){.layout{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.card .p{padding:16px}
+.card h2{font-size:16px;margin:0 0 6px 0}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+.nav a{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:12px;border:1px solid transparent;color:var(--text);font-weight:600}
+.nav a small{color:var(--muted);font-weight:600}
+.nav a:hover{background:rgba(16,24,40,.03);border-color:var(--border);text-decoration:none}
+hr{border:none;border-top:1px solid var(--border);margin:14px 0}
+details{border:1px solid var(--border);border-radius:14px;background:#fff;overflow:hidden}
+details+details{margin-top:10px}
+summary{cursor:pointer;list-style:none;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+.sumL{display:flex;gap:10px;align-items:center}
+.ico{width:26px;height:26px;border-radius:10px;border:1px solid rgba(196,81,23,.25);background:rgba(196,81,23,.08);display:grid;place-items:center;color:#7a2a07;font-weight:900}
+.chev{color:var(--muted);font-weight:900}
+details[open] summary{border-bottom:1px solid var(--border);background:rgba(16,24,40,.02)}
+.body{padding:12px 14px}
+.ul{margin:0;padding-left:18px}
+.ul li{margin:8px 0;color:var(--text);font-size:13px}
+.note{background:rgba(11,97,255,.06);border:1px solid rgba(11,97,255,.18);padding:10px 12px;border-radius:14px;color:#0b1b3a;font-size:13px}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:8px;margin-top:10px}
+@media (max-width: 520px){.kv{grid-template-columns:1fr}}
+.k{color:var(--muted);font-size:12px}
+.v{font-size:13px}
+.sysgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width: 960px){.sysgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width: 520px){.sysgrid{grid-template-columns:1fr}}
+.syscard{border:1px solid var(--border);border-radius:14px;background:#fff;padding:12px}
+.syscard h3{margin:0 0 6px 0;font-size:14px}
+.syscard .muted{color:var(--muted);font-size:12px;line-height:1.35;margin:0}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--muted);font-size:12px;margin-right:6px;margin-top:8px}
+.pill.orange{border-color:rgba(196,81,23,.25);background:rgba(196,81,23,.07);color:#7a2a07}
+footer{color:var(--muted);font-size:12px;padding:18px 16px}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="h1">
+      <div>
+        <h1 class="title">AMD Global Security Knowledge Portal • Security Manager Portal (MGR)</h1>
+        <p class="subtitle">Program oversight, dashboards, governance actions, and compliance — Phase 1 (wired SOP links).</p>
+        <div class="badges">
+          <span class="badge role"><strong>MGR</strong> Portal</span>
+          <span class="badge"><strong>Phase 1</strong> SOP 11–17</span>
+          <span class="badge"><strong>Theme</strong> Light</span>
+          <span class="badge"><strong>LaunchKit</strong> Link Help</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="layout">
+    <aside class="card">
+      <div class="p">
+        <h2>Portal Navigation</h2>
+        <p>Jump to key tiles. SOP links open in a new tab.</p>
+        <hr/>
+        <nav class="nav">
+          <a href="#tile-1">Tile 1 <small>T1</small></a>
+          <a href="#tile-2">Tile 2 <small>T2</small></a>
+          <a href="#tile-3">Tile 3 <small>T3</small></a>
+          <a href="#tools">Tools & Systems <small>TOOLS</small></a>
+          <a href="#link-help">Link Help <small>HELP</small></a>
+        </nav>
+        <hr/>
+        <div class="note">
+          <strong>SharePoint tip:</strong> If a click opens blank or does nothing, use the Link Help tile below.
+        </div>
+      </div>
+    </aside>
+
+    <section>
+      <div class="card" id="link-help">
+        <div class="p">
+          <h2>Link Help (SharePoint / GSKP)</h2>
+          <p>Fallback workflow when SharePoint sandbox blocks navigation.</p>
+          <details style="margin-top:10px">
+            <summary><span class="sumL"><span class="ico">↗</span><span><strong>Open links reliably</strong><br><span style="color:var(--muted);font-weight:600;font-size:12px">Right‑click / Open link in new tab</span></span></span><span class="chev">›</span></summary>
+            <div class="body">
+              <ul class="ul">
+                <li>If a link opens blank or does nothing, <strong>right‑click</strong> the link.</li>
+                <li>Select <strong>Open link in new tab</strong> (or “Open in new window”).</li>
+                <li>If you’re on mobile, press-and-hold and choose <strong>Open in new tab</strong>.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      
+<div class="card" id="tile-1" style="margin-top:16px">
+  <div class="p">
+    <h2>Tile 1 — Executive Visibility</h2>
+    <p>Dashboards and incident reporting program visibility.</p>
+    <div><span class="pill orange">Manager</span></div>
+    <div style="margin-top:12px">
+      
+<details>
+  <summary><span class="sumL"><span class="ico">📊</span><span><strong>Program Reporting & Visibility</strong><br><span style="color:var(--muted);font-weight:600;font-size:12px">Training + Field modules</span></span></span><span class="chev">›</span></summary>
+  <div class="body">
+    <ul class="ul">
+      <li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-17_Incident_Documentation_Reporting_D3_Training.html?csf=1&web=1&e=fK1Ors" target="_blank" rel="noopener">SOP-17 — Incident Documentation & Reporting (D3) (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-17_Incident_Documentation_Reporting_D3_Field.html?csf=1&web=1&e=eAZaH3" target="_blank" rel="noopener">SOP-17 — Incident Documentation & Reporting (D3) (Field)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-16_AlertMedia_Notifications_Escalations_Training.html?csf=1&web=1&e=sB1n02" target="_blank" rel="noopener">SOP-16 — AlertMedia Notifications & Escalations (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-16_AlertMedia_Notifications_Escalations_Field.html?csf=1&web=1&e=C4kaf5" target="_blank" rel="noopener">SOP-16 — AlertMedia Notifications & Escalations (Field)</a></li>
+    </ul>
+  </div>
+</details>
+
+    </div>
+  </div>
+</div>
+
+<div class="card" id="tile-2" style="margin-top:16px">
+  <div class="p">
+    <h2>Tile 2 — Governance Actions</h2>
+    <p>Requests and trackers (pilot placeholders until URLs are provided).</p>
+    <div><span class="pill orange">Governance</span></div>
+    <div style="margin-top:12px">
+      
+<details>
+  <summary><span class="sumL"><span class="ico">📌</span><span><strong>Program actions</strong><br><span style="color:var(--muted);font-weight:600;font-size:12px">Placeholders for pilot</span></span></span><span class="chev">›</span></summary>
+  <div class="body">
+    <ul class="ul">
+      <li><a href="#" target="_blank" rel="noopener">Training Tracker (Smartsheet) — placeholder</a></li>
+      <li><a href="#" target="_blank" rel="noopener">SOP ownership list — placeholder</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Request SOP change — placeholder</a></li>
+      <li><a href="#" target="_blank" rel="noopener">Request training update — placeholder</a></li>
+    </ul>
+  </div>
+</details>
+
+    </div>
+  </div>
+</div>
+
+<div class="card" id="tile-3" style="margin-top:16px">
+  <div class="p">
+    <h2>Tile 3 — Quality & Compliance</h2>
+    <p>Incident reporting quality, notification governance, escalations.</p>
+    <div><span class="pill orange">Compliance</span></div>
+    <div style="margin-top:12px">
+      
+<details>
+  <summary><span class="sumL"><span class="ico">📚</span><span><strong>Core SOPs (Phase 1)</strong><br><span style="color:var(--muted);font-weight:600;font-size:12px">Training + Field modules</span></span></span><span class="chev">›</span></summary>
+  <div class="body">
+    <ul class="ul">
+      <li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-11_Alarm_Validation_Initial_Response_Training.html?csf=1&web=1&e=aLRW54" target="_blank" rel="noopener">SOP-11 — Alarm Validation & Initial Response (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-11_Alarm_Validation_Initial_Response_Field.html?csf=1&web=1&e=8BVkwu" target="_blank" rel="noopener">SOP-11 — Alarm Validation & Initial Response (Field)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-12_CCTV_Investigation_Monitoring_Training.html?csf=1&web=1&e=hj6EXd" target="_blank" rel="noopener">SOP-12 — CCTV Investigation & Monitoring (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-12_CCTV_Investigation_Monitoring_Field.html?csf=1&web=1&e=S3WKSD" target="_blank" rel="noopener">SOP-12 — CCTV Investigation & Monitoring (Field)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-15_Dispatch_Communications_Training.html?csf=1&web=1&e=E7SRQL" target="_blank" rel="noopener">SOP-15 — Dispatch & Communications (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-15_Dispatch_Communications_Field.html?csf=1&web=1&e=cbbnXU" target="_blank" rel="noopener">SOP-15 — Dispatch & Communications (Field)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-16_AlertMedia_Notifications_Escalations_Training.html?csf=1&web=1&e=sB1n02" target="_blank" rel="noopener">SOP-16 — AlertMedia Notifications & Escalations (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-16_AlertMedia_Notifications_Escalations_Field.html?csf=1&web=1&e=C4kaf5" target="_blank" rel="noopener">SOP-16 — AlertMedia Notifications & Escalations (Field)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-17_Incident_Documentation_Reporting_D3_Training.html?csf=1&web=1&e=fK1Ors" target="_blank" rel="noopener">SOP-17 — Incident Documentation & Reporting (D3) (Training)</a></li><li><a href="https://amdcloud.sharepoint.com/:u:/r/sites/AMDSecurity/Training/Shared%20Documents/Test/SOP_Library/SOP-17_Incident_Documentation_Reporting_D3_Field.html?csf=1&web=1&e=eAZaH3" target="_blank" rel="noopener">SOP-17 — Incident Documentation & Reporting (D3) (Field)</a></li>
+    </ul>
+  </div>
+</details>
+
+    </div>
+  </div>
+</div>
+
+<div class="card" id="tools" style="margin-top:16px">
+  <div class="p">
+    <h2>Tools & Systems</h2>
+    <p>Manager-level reporting and oversight links.</p>
+    <ul class="ul" style="margin-top:10px">
+      <li><a href="https://app.powerbi.com/groups/me/reports/d32671bf-e4d2-41fd-9725-74c070445437/47d323d0ee59cba9a780?experience=power-bi" target="_blank" rel="noopener">Power BI Report (web)</a></li>
+      <li><a href="https://amd.alertmedia.com/dashboard" target="_blank" rel="noopener">AlertMedia Dashboard (web)</a></li>
+      <li><a href="http://atld3prod01.amd.com/D3VSOC/Login.aspx?redirect=1&reset=true" target="_blank" rel="noopener">D3 Incident Management (web)</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">
+  Prototype portal HTML for Phase 1 pilot. Replace/add SOP links as new standalones publish.
+</footer>
+</body>
+</html>
